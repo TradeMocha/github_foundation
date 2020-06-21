@@ -19,7 +19,6 @@ resource "github_branch_protection" "terraform_quality_gate" {
   required_status_checks {
     strict = false
     contexts = [
-      "Build",
     ]
   }
 

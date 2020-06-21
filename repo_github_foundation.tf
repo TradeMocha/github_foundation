@@ -20,7 +20,6 @@ resource "github_branch_protection" "github_foundation" {
   required_status_checks {
     strict = false
     contexts = [
-      "Quality Gate",
       "Terraform Cloud/${var.github_organization}/${github_repository.github_foundation.name}"
     ]
   }

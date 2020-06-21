@@ -20,7 +20,6 @@ resource "github_branch_protection" "terraform_github_repository" {
   required_status_checks {
     strict = false
     contexts = [
-      "Quality Gate",
     ]
   }
 

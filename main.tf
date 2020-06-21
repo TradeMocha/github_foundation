@@ -15,9 +15,3 @@ terraform {
     }
   }
 }
-
-////# Add a user to the organization (Teams need at least one member)
-//resource "github_membership" "dallinwright" {
-//  username = "dallinwright"
-//  role     = "admin"
-//}
