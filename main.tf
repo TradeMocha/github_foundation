@@ -5,16 +5,16 @@ provider "github" {
 }
 
 # Terraform cloud integration. Note the resources must already exist below for this to work.
-//terraform {
-//  backend "remote" {
-//    hostname     = "app.terraform.io"
-//    organization = "TradeMocha"
-//
-//    workspaces {
-//      name = "github_foundation"
-//    }
-//  }
-//}
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "TradeMocha"
+
+    workspaces {
+      name = "github_foundation"
+    }
+  }
+}
 
 ////# Add a user to the organization (Teams need at least one member)
 //resource "github_membership" "dallinwright" {
