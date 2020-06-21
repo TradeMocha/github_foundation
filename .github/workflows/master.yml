@@ -1,0 +1,16 @@
+name: 'Terraform Quality Gate'
+
+on: [pull_request]
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    name: Quality Gate
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Terraform Quality Gate
+      uses: OptionAlpaca/terraform_quality_gate@v0.1.15
+      with:
+        terratest: full
+        terraform_cloud_token: ${{ secrets.TF_API_TOKEN }}
